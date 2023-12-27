@@ -1,0 +1,2 @@
+root: C:\Users\omega.fullard\source\repos\BuildABot_Vue\nvm
+path: C:\Program Files\nodejs

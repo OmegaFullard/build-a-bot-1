@@ -1,15 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <nav>
+      <ul>
+        <li class="nav-item">
+          <img class="logo" src="./assets/build-a-bot-logo.png" alt="logo" />
+          Build-a-Bot
+
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <!-- <HomePage msg="Welcome to Your Vue.js App" /> -->
+    <ProductSearch />
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+  //import HomePage from './Home/HomePage.vue';
+  //import RobotBuilder from './build/RobotBuilder.vue';
+  import ProductSearch from './ProductSearch.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld,
+    components: {
+      ProductSearch,
   },
 };
 </script>
@@ -17,10 +33,40 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
+}
+body{
+    background: linear-gradient(to bottom, #555, #999);
+    background-attachment: fixed;
+}
+main{
+  background: #fff; 
+  margin: 0 auto;
+  padding: 30px;
+  width: 1400px;
+  min-height: 300px;
+}
+
+header{
+  background-color: #999;
+  margin: 0 auto;
+  width: 1460px;
+
+}
+
+ul {
+ 
+  padding: 0;
+  display: flex;
+}
+.nav-item {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 22px;
+  border-right: 1px solid #bbb;
+}
+.logo{
+  height: 30px;
+  vertical-align: middle;
 }
 </style>

@@ -13,32 +13,39 @@
   <main>
 
     <!-- <HomePage msg="Welcome to Your Vue.js App" /> -->
-    <ProductSearch />
+    <RobotBuilder />
   </main>
 </template>
 
 <script>
   //import HomePage from './Home/HomePage.vue';
-  //import RobotBuilder from './build/RobotBuilder.vue';
-  import ProductSearch from './ProductSearch.vue';
+  import RobotBuilder from './build/RobotBuilder.vue';
+  //import ProductSearch from './ProductSearch.vue';
 
 export default {
   name: 'App',
     components: {
-      ProductSearch,
+      RobotBuilder,
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   
 }
+
+
 body{
     background: linear-gradient(to bottom, #555, #999);
     background-attachment: fixed;
 }
+
+</style>
+
+<style scoped>
+
 main{
   background: #fff; 
   margin: 0 auto;

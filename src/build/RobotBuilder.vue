@@ -7,31 +7,31 @@
         {{ selectedRobot.head.title }}
           <span v-if="selectedRobot.head.onSale" class="sale">Sale!!</span>
         </div>
-        <img src="selectedRoobot.head.imgUrl" alt="head" />
+        <img src="selectedRobot.head.imgUrl" alt="head" />
         <button @click="selectPreviousHead()" class="prev-selector">&#9668;</button>
         <button @click="selectNextHead()" class="next-selector">&#9658;</button>
       </div>
     </div>
     <div class="middle-row">
       <div class="left part">
-        <img src="selectedRoobot.leftarm.imgUrl" alt="left arm" />
+        <img src="selectedRobot.leftArm.imgUrl" alt="left arm" />
         <button @click="selectPreviousLeftArm()" class="prev-selector">&#9650;</button>
         <button @click="selectNextArm()" class="next-selector">&#9660;</button>
       </div>
       <div class="center part">
-        <img src="selectedRoobot.torso.imgUrl" alt="torso" />
+        <img src="selectedRobot.torso.imgUrl" alt="torso" />
         <button @click="selectPreviousTorso()" class="prev-selector">&#9668;</button>
         <button @click="selectNextTorso()" class="next-selector">&#9658;</button>
       </div>
       <div class="right part">
-        <img src="selectedRoobot.rightarm.imgUrl" alt="right arm" />
+        <img src="selectedRobot.rightArm.imgUrl" alt="right arm" />
         <button @click="selectPreviousRightArm()" class="prev-selector">&#9650;</button>
         <button @click="selectNextRightArm()" class="next-selector">&#9660;</button>
       </div>
     </div>
     <div class="bottom-row">
       <div class="bottom part">
-        <img src="selectedRoobot.bases.imgUrl" alt="base" />
+        <img src="selectedRobot.bases.imgUrl" alt="base" />
         <button @click="selectPreviousBase()" class="prev-selector">&#9668;</button>
         <button @click="selectNextBase()" class="next-selector">&#9658;</button>
       </div>
@@ -85,7 +85,7 @@
         head: availableParts.heads[SelectedHeadIndex.value],
         leftArm: availableParts.arms[SelectedLeftArmIndex.value],
         torso: availableParts.torsos[SelectedTorsoIndex.value],
-        rightarm: availableParts.arms[SelectedRightArmIndex.value],
+        rightArm: availableParts.arms[SelectedRightArmIndex.value],
         base: availableParts.bases[SelectedBaseIndex.value],
       }));
 
@@ -95,7 +95,7 @@
         const cost = robot.head.cost +
           robot.leftArm.cost +
           robot.torso.cost +
-          robot.rightarm.cost +
+          robot.rightArm.cost +
           robot.base.cost;
         cart.push({ ...robot, cost });
         console.log(cart.length);
@@ -162,11 +162,12 @@
         );
       };
 
-  //#endregion
+  // #EndRegion
 
    
 </script>
-<style>
+
+<style scoped>
   .part {
     position: relative;
     width: 200px;

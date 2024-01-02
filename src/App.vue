@@ -5,7 +5,6 @@
         <li class="nav-item">
           <img class="logo" src="./assets/build-a-bot-logo.png" alt="logo" />
           Build-a-Bot
-
         </li>
       </ul>
     </nav>
@@ -17,17 +16,15 @@
   </main>
 </template>
 
-<script>
+<script setup>
+
+import {ref, provide} from 'vue';
   //import HomePage from './Home/HomePage.vue';
   import RobotBuilder from './build/RobotBuilder.vue';
   //import ProductSearch from './ProductSearch.vue';
 
-export default {
-  name: 'App',
-    components: {
-      RobotBuilder,
-  },
-};
+const userName = ref('Omega');
+provide('userName', userName);
 </script>
 
 <style>
